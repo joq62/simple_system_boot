@@ -1,7 +1,14 @@
 all:
 	rm -rf  *~ */*~ ctrl_dir ctrl;
-#	git clone https://github.com/joq62/system_boot.git;
+	git clone https://github.com/joq62/system_boot.git;
 	echo Done;
+ctrl:
+	rm -rf ctrl
+	rm -rf ctrl_dir
+	git clone https://github.com/joq62/ctrl.git
+	mkdir ctrl_dir
+	tar -zxf ctrl/release/ctrl.tar.gz -C ctrl_dir
+	sudo rm -r ctrl
 test:
 	cd /home/ubuntu;
 	rm -rf erl_cra* rebar3_crashreport 
