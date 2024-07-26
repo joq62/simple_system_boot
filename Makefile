@@ -1,6 +1,7 @@
 all:
-	rm -rf  *~ */*~ ctrl_dir ctrl;
-	git clone https://github.com/joq62/system_boot.git;
+	rm -rf  *~ */*~ ctrl_dir ctrl sys_boot.sh;
+	git clone https://github.com/joq62/simple_system_boot.git;
+	cp simple_system_boot/sys_boot.sh .
 	echo Done;
 ctrl:
 	rm -rf ctrl
