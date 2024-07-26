@@ -6,4 +6,3 @@ mkdir ctrl_dir
 tar -zxf ctrl/release/ctrl.tar.gz -C ctrl_dir
 sudo rm -r ctrl
 ./ctrl_dir/bin/ctrl daemon
-sudo echo "$!" > /run/sys_boot.pid
