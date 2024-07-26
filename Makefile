@@ -1,5 +1,5 @@
 all:
-	rm -rf  *~ */*~ ctrl_dir ctrl sys_boot.sh;
+	sudo rm -rf  *~ */*~ ctrl_dir ctrl simple_system_boot sys_boot.sh;
 	git clone https://github.com/joq62/simple_system_boot.git;
 	cp simple_system_boot/sys_boot.sh .
 	echo Done;
