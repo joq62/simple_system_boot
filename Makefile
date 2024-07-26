@@ -1,6 +1,6 @@
 all:
 	rm -rf  *~ */*~ ctrl_dir ctrl;
-	git clone https://github.com/joq62/system_boot.git;
+#	git clone https://github.com/joq62/system_boot.git;
 	echo Done;
 test:
 	cd /home/ubuntu;
