@@ -1,2 +1,2 @@
 #!/bin/bash
-./ctrl_dir/bin/ctrl daemon &
+./ctrl_dir/bin/ctrl daemon
