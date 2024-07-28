@@ -1,15 +1,27 @@
 all:
+	sudo rm -rf  *~ */*~
+	sudo rm -rf simple_system_boot sys_boot.sh;
+	git clone https://github.com/joq62/simple_system_boot.git;
+	cp simple_system_boot/sys_boot.sh .
+	sudo rm -rf ctrl ctrl_dir
+	git clone https://github.com/joq62/ctrl.git
+	mkdir ctrl_dir
+	tar -zxf ctrl/release/ctrl.tar.gz -C ctrl_dir
+	sudo rm -r catalog_specs;
+	git clone https://github.com/joq62/catalog_specs.git
+	mv catalog_specs ctrl_dir
+	sudo rm -r host_specs;
+	git clone https://github.com/joq62/host_specs.git
+	mv host_specs ctrl_dir
+	sudo rm -r deployment_specs;
+	git clone https://github.com/joq62/deployment_specs.git
+	mv deployment_specs ctrl_dir
+	echo do copy of the Makefile
+sys_boot:
 	sudo rm -rf  *~ */*~ ctrl_dir ctrl simple_system_boot sys_boot.sh;
 	git clone https://github.com/joq62/simple_system_boot.git;
 	cp simple_system_boot/sys_boot.sh .
 	echo Done;
-ctrl:
-	rm -rf ctrl
-	rm -rf ctrl_dir
-	git clone https://github.com/joq62/ctrl.git
-	mkdir ctrl_dir
-	tar -zxf ctrl/release/ctrl.tar.gz -C ctrl_dir
-	sudo rm -r ctrl
 test:
 	cd /home/ubuntu;
 	rm -rf erl_cra* rebar3_crashreport 
