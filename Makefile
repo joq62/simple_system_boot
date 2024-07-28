@@ -7,13 +7,13 @@ all:
 	git clone https://github.com/joq62/ctrl.git
 	mkdir ctrl_dir
 	tar -zxf ctrl/release/ctrl.tar.gz -C ctrl_dir
-	sudo rm -r catalog_specs;
+	sudo rm -rf catalog_specs;
 	git clone https://github.com/joq62/catalog_specs.git
 	mv catalog_specs ctrl_dir
-	sudo rm -r host_specs;
+	sudo rm -rf host_specs;
 	git clone https://github.com/joq62/host_specs.git
 	mv host_specs ctrl_dir
-	sudo rm -r deployment_specs;
+	sudo rm -rf deployment_specs;
 	git clone https://github.com/joq62/deployment_specs.git
 	mv deployment_specs ctrl_dir
 	echo do copy of the Makefile
